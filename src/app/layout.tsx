@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import clsx from 'clsx';
+import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "LoLja - Artists",
   description: "Um espaço reservado para pequenos produtores",
 };
@@ -18,12 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
-       
-        <Navbar/>
-        <main className='bg-slate-700 h-screen p-16 text-black'>
-          {children}
-        </main>
+      <body className={clsx(inter.className, 'bg-slate-700')}>
+        <Navbar />
+        <main className=' h-screen p-16'>{children}</main>
       </body>
     </html>
   );
