@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import {ptBR} from "@clerk/localizations";
+import Link from 'next/link';
 
 
 const inter = Inter({ subsets: ["latin"] });
